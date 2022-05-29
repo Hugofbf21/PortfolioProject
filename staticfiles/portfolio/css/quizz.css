@@ -1,0 +1,102 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+
+/* div "menu" */
+header {
+    /* O menu está sticky e ocupa 10vh da altura do viewport */
+    height: 10vh;
+    background: rgb(48, 48, 48);
+    background: linear-gradient(86deg, rgba(215, 214, 214, 1) 0%, rgba(48, 48, 48, 0.9387955865940126) 48%);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+nav a {
+    display: block;
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white
+}
+
+main > p {
+    text-align: center;
+    color: rgb(153, 153, 153);
+    text-shadow: 2px 2px black;
+}
+main > h3{
+    text-align: center;
+}
+
+footer {
+    /* definindo altura e cor */
+    height: 10vh;
+    background: rgb(215, 214, 214);
+    background: linear-gradient(270deg, rgba(215, 214, 214, 1) 0%, rgba(34, 34, 34, 1) 50%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: auto;
+    width: 120px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.contacts {
+    display: flex;
+    max-width: 10%;
+    height: auto;
+}
+
+.linkedin {
+    justify-content: left;
+}
+
+.email {
+    justify-content: left;
+}
+main {
+    /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
+    height: 120vh;
+    background-color: rgb(48, 48, 48);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+
+
+

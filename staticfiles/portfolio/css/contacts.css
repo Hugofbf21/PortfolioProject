@@ -1,0 +1,158 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+body > * {
+    /* centrando o <p> dos divs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+/* div "menu" */
+header {
+    /* O menu está sticky e ocupa 10vh da altura do viewport */
+    height: 10vh;
+    background: rgb(48, 48, 48);
+    background: linear-gradient(86deg, rgba(215, 214, 214, 1) 0%, rgba(48, 48, 48, 0.9387955865940126) 48%);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+nav a {
+    display: block;
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white
+}
+
+main > p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+    color: rgb(153, 153, 153);
+    text-shadow: 1px 1px #3d393a;
+}
+
+
+footer {
+    /* definindo altura e cor */
+    height: 10vh;
+    background: rgb(215, 214, 214);
+    background: linear-gradient(270deg, rgba(215, 214, 214, 1) 0%, rgba(34, 34, 34, 1) 50%);
+    color: white;
+}
+
+.logo {
+    height: auto;
+    width: 120px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.contacts {
+    display: flex;
+    max-width: 10%;
+    height: auto;
+}
+
+.linkedin {
+    justify-content: left;
+}
+
+.email {
+    justify-content: left;
+}
+.cv{
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.row{
+    display: flex;
+}
+.column{
+    flex: 50%;
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(153, 153, 153);
+    text-shadow: 1px 1px #3d393a;
+}
+
+.column > p{
+    align-items: center;
+    font-size: 1.5rem;
+}
+main {
+    /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
+    height: 120vh;
+    background-color: rgb(48, 48, 48);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+
+input[type=submit] {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color: rgb(153, 153, 153);
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: rgb(153, 153, 153);
+  padding: 20px;
+}
+
+
+
+

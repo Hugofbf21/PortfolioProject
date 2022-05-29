@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hugo Fernandes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/quizz.css' %}">
+
+</head>
+
+<body>
+<header>
+    {% load static %}
+    <div class="logo">
+        <img src="{% static 'portfolio/images/logo.png' %}" alt="logo"/>
+    </div>
+
+
+    <nav>
+        <a href="work">Work</a>
+        <a href="about">About</a>
+        <a href="contacts">Contacts</a>
+        <a href="bloglist">Blog</a>
+        <a href="quizz">Quizz</a>
+        <a href="subject">Subjects</a>
+        {% if request.user.is_authenticated %}
+            <a href="{%  url 'portfolio:logout' %}">Logout</a>
+            {% else %}
+            <a href="{%  url 'portfolio:login' %}">Login</a>
+            {% endif %}
+    </nav>
+</header>
+
+<main>
+<h3>Quizz</h3>
+    <p>Conheces bem a linguagem HTML? Então testa as tuas habilidades neste Quizz!</p>
+
+    <form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Quizz de Programação Web</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Nome</label>
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="O seu nome" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Qual é a linguagem usada para estilizar os conteudos de html?</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      HTML
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      Django
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-2">
+      <input type="radio" name="radios" id="radios-2" value="3">
+      CSS
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-3">
+      <input type="radio" name="radios" id="radios-3" value="4">
+      JavaScipt
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-4">
+      <input type="radio" name="radios" id="radios-4" value="5">
+      Java
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Qual destas tag são possiveis usar para inserir imagens?</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      img
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      src
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-2">
+      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="">
+      class
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-3">
+      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="">
+      background-image
+    </label>
+	</div>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+</main>
+
+<footer>
+    <div class="contacts">
+        <div class="linkedin"><p><a href="https://www.linkedin.com/in/hugobfernandes/"> <img
+                src="{% static 'portfolio/images/linkedin.png' %}" alt="linkedin"></a></p></div>
+        <p>&emsp;</p>
+        <div class="email"><p><a href="mailto: hugofbarracosa@gmail.com"><img
+                src="{% static 'portfolio/images/email.png' %}" alt="email"></a></p></div>
+    </div>
+</footer>
+</body>
