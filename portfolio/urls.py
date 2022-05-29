@@ -28,6 +28,6 @@ urlpatterns = [
     path('editar/contacts', views.contacts_view, name='contacts'),
     path('editar/quizz', views.quizz_view, name='quizz'),
     path('editar/subject', views.subject_view, name='subject'),
-    path('editar/subjectadd', views.subject_view, name='subject'),
+    path('editar/subjectadd', views.subjectadd_view, name='subjectadd'),
     path('editar/<int:post_id>', views.editar_view, name='editar'),
 ]
