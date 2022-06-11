@@ -22,6 +22,8 @@ urlpatterns = [
     path('blogadd', views.blogadd_view, name='blogadd'),
     path('bloglist', views.bloglist_view, name='bloglist'),
     path('quizz', views.quizz_view, name='quizz'),
+    path('tfc', views.tfc_view, name='tfc'),
+    path('api', views.api_view, name='api'),
     path('editar/bloglist', views.bloglist_view, name='bloglist'),
     path('editar/work', views.work_view, name='work'),
     path('editar/about', views.about_view, name='about'),
@@ -29,5 +31,7 @@ urlpatterns = [
     path('editar/quizz', views.quizz_view, name='quizz'),
     path('editar/subject', views.subject_view, name='subject'),
     path('editar/subjectadd', views.subjectadd_view, name='subjectadd'),
+    path('tfcinfo/tfc', views.tfc_view, name='tfc'),
     path('editar/<int:post_id>', views.editar_view, name='editar'),
+    path('tfcinfo/<int:tfc_id>', views.infotfc_view, name='tfcinfo'),
 ]

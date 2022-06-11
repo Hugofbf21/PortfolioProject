@@ -8,11 +8,7 @@ html {
     font-family: sans-serif;
 }
 
-#clock{
-    font-size: 2.5rem;
-    color: black;
-    padding-right: 22vw;
-}
+
 
 /* div "menu" */
 header {
@@ -45,6 +41,9 @@ main > p {
     text-align: center;
     color: rgb(153, 153, 153);
     text-shadow: 2px 2px black;
+}
+main > h1{
+    text-align: center;
 }
 main > h3{
     text-align: center;
@@ -104,7 +103,66 @@ main {
 main > form{
     text-align: center;
 }
+.image-list-small {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.image-list-small li {
+  display: inline-block;
+  width: 300px;
+  margin: 0 12px 30px;
+}
+#clock{
+    font-size: 2.5rem;
+    color: black;
+    padding-right: 22vw;
+}
+
+/* Photo */
+
+.image-list-small li > a {
+  display: block;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center;
+  height: 350px;
+  margin: 0;
+  padding: 0;
+  border: 4px solid #ffffff;
+  outline: 1px solid #d0d0d0;
+  box-shadow: 0 2px 1px #DDD;
+}
+
+.image-list-small .details {
+  margin-top: 13px;
+}
 
 
+/* Title */
 
+.image-list-small .details h3 {
+  display: block;
+  font-size: 12px;
+  margin: 0 0 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.image-list-small .details h3 a {
+  color: #303030;
+  text-decoration: none;
+}
+
+.image-list-small .details .image-author {
+  display: block;
+  color: #717171;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}

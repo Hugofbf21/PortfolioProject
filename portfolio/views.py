@@ -8,6 +8,12 @@ from django.urls import reverse
 from portfolio.forms import *
 
 
+def tfc_view(request):
+    pictures = TFC.objects.all()
+    ctx = {'pictures': pictures}
+    return render(request, 'portfolio/tfc.html', ctx)
+
+
 def view_login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -33,6 +39,11 @@ def view_logout(request):
     return render(request, 'portfolio/login.html', {
         'message': 'You were disconnected.'
     })
+
+
+def bloglist_view(request):
+    context = {'posts': Post.objects.all()}
+    return render(request, 'portfolio/blog.html', context)
 
 
 def bloglist_view(request):
@@ -70,6 +81,13 @@ def editar_view(request, post_id):
     return render(request, 'portfolio/editar.html', context)
 
 
+def infotfc_view(request, tfc_id):
+    tfc = TFC.objects.get(pk=tfc_id)
+    context = {'tfc': tfc}
+
+    return render(request, 'portfolio/tfcinfo.html', context)
+
+
 def blogadd_view(request):
     form = PostForm(request.POST or None)
 
@@ -88,6 +106,10 @@ def layout_view(request):
 
 def home_view(request):
     return render(request, 'portfolio/home.html')
+
+
+def api_view(request):
+    return render(request, 'portfolio/api.html')
 
 
 def login_view(request):

@@ -11,6 +11,21 @@ class Post(models.Model):
         return self.titulo[:20]
 
 
+class TFC(models.Model):
+    titulo = models.CharField(max_length=30)
+    autores = models.TextField(default="Authors")
+    orientadores = models.CharField(max_length=50)
+    imagem = models.ImageField(upload_to='pictures/', blank=True)
+    ano = models.IntegerField()
+    resumo = models.TextField(default="Text")
+    relatorio = models.DateTimeField(auto_now_add=True)
+    git = models.URLField()
+    video = models.URLField()
+
+    def __str__(self):
+        return self.titulo[:20]
+
+
 class Professor(models.Model):
     nome = models.CharField(max_length=20)
     linkLusofona = models.URLField

@@ -8,11 +8,6 @@ html {
     font-family: sans-serif;
 }
 
-#clock{
-    font-size: 2.5rem;
-    color: black;
-    padding-right: 22vw;
-}
 
 /* div "menu" */
 header {
@@ -46,7 +41,12 @@ main > p {
     color: rgb(153, 153, 153);
     text-shadow: 2px 2px black;
 }
-main > h3{
+
+main > h1 {
+    text-align: center;
+}
+
+main > h3 {
     text-align: center;
 }
 
@@ -73,7 +73,11 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
-
+#clock{
+    font-size: 2.5rem;
+    color: black;
+    padding-right: 22vw;
+}
 
 .contacts {
     display: flex;
@@ -88,9 +92,10 @@ img {
 .email {
     justify-content: left;
 }
+
 main {
     /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
-    height: 120vh;
+    height: 80vh;
     background-color: rgb(48, 48, 48);
     background-repeat: no-repeat;
     background-position: center;
@@ -100,11 +105,3 @@ main {
     font-size: 30px;
     line-height: 45px;
 }
-
-main > form{
-    text-align: center;
-}
-
-
-
-

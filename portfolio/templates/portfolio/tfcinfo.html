@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Hugo Fernandes</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/subjectadd.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/tfcinfo.css' %}">
     <script>function startTime() {
         const today = new Date();
         let h = today.getHours();
@@ -36,29 +36,40 @@
     <div id="clock"></div>
 
     <nav>
-        <a href="work">Work</a>
-        <a href="about">About</a>
-        <a href="contacts">Contacts</a>
-        <a href="bloglist">Blog</a>
-        <a href="quizz">Quizz</a>
-        <a href="subject">Subjects</a>
-        {% if request.user.is_authenticated %}
-            <a href="{% url 'portfolio:logout' %}">Logout</a>
-        {% else %}
-            <a href="{% url 'portfolio:login' %}">Login</a>
-        {% endif %}
+        <a href="tfc">Back</a>
+
     </nav>
 </header>
 
 <main>
-    {% block main %}
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
 
-            <input type="submit" value="Save" class="newPost">
-        </form>
+    {% block main %}
+        <br>
+        <h1>{{ tfc.titulo }}</h1>
+        <br>
+        <div>
+            <h2>Autores:{{ tfc.autores }}</h2>
+            <h2>Orientador:{{ tfc.orientadores }}</h2>
+        </div>
+        <h3>{{ tfc.ano }}</h3>
+        <br>
+
+        <p>{{ tfc.resumo }}</p>
+        <br>
+        <div class="imgbox">
+        <img src="{{ tfc.imagem.url }}" class="center">
+        </div>
+        <br>
+
+        <p>Git:{{ tfc.git }}</p>
+        <br>
+        <p>Video:{{ tfc.video }}</p>
+
+
+
+
     {% endblock %}
+
 </main>
 
 <footer>

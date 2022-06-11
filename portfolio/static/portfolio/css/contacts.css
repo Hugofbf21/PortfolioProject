@@ -118,7 +118,11 @@ main {
     background-size: cover;
     background-attachment: fixed;
 }
-
+#clock{
+    font-size: 2.5rem;
+    color: black;
+    padding-right: 22vw;
+}
 
 input[type=text], select, textarea {
   width: 100%;

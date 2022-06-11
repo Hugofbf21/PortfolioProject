@@ -8,6 +8,12 @@ html {
     font-family: sans-serif;
 }
 
+#clock{
+    font-size: 2.5rem;
+    color: black;
+    padding-right: 22vw;
+}
+
 
 body > * {
     /* centrando o <p> dos divs */
@@ -66,8 +72,20 @@ main > p {
 
 article.primeiro {
     /* definindo altura e cor */
-    height: 90vh;
-    padding: 0 4vw;
+    height: 50vh;
+    padding-right: 45px;
+    padding-left: 45px;
+    background-color: rgb(34, 34, 34);
+    color: rgb(153, 153, 153);
+    text-align: center;
+    font-size: 2rem;
+}
+article.segundo {
+    /* definindo altura e cor */
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    padding-bottom: 10px;
     background-color: rgb(34, 34, 34);
     color: rgb(153, 153, 153);
     text-align: center;

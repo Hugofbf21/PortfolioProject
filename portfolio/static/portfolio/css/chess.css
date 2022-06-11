@@ -16,7 +16,11 @@ body > * {
     align-items: center;
     font-size: 3em;
 }
-
+#clock{
+    font-size: 2.5rem;
+    color: black;
+    padding-right: 22vw;
+}
 /* div "menu" */
 header {
     /* O menu está sticky e ocupa 10vh da altura do viewport */

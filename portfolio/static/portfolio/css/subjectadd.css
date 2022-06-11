@@ -80,7 +80,11 @@ img {
 .linkedin {
     justify-content: left;
 }
-
+#clock{
+    font-size: 2.5rem;
+    color: black;
+    padding-right: 22vw;
+}
 .email {
     justify-content: left;
 }

@@ -6,16 +6,37 @@
     <title>Welcome</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio/css/work.css' %}">
+    <script>function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        // add zero in front of numbers < 10
+        return i;
+    }</script>
+
 
 </head>
 
-<body>
+<body onload="startTime()">
+
 <header>
     {% load static %}
     <div class="logo">
         <img src="{% static 'portfolio/images/logo.png' %}" alt="logo"/>
-    </div>
 
+    </div>
+    <div id="clock"></div>
 
     <nav>
         <a href="work">Work</a>
@@ -25,16 +46,17 @@
         <a href="quizz">Quizz</a>
         <a href="subject">Subjects</a>
         {% if request.user.is_authenticated %}
-            <a href="{%  url 'portfolio:logout' %}">Logout</a>
-            {% else %}
-            <a href="{%  url 'portfolio:login' %}">Login</a>
-            {% endif %}
+            <a href="{% url 'portfolio:logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'portfolio:login' %}">Login</a>
+        {% endif %}
     </nav>
 </header>
 
 <main>
     <p>MY WORK <br> SCROLL DOWN TO SEE MORE <br><a href="#down">
         <button class="down"><img src="{% static 'portfolio/images/down-arrow.png' %}" alt="arrow"></button>
+
     </a></p>
 
 
@@ -44,15 +66,27 @@
 </div>
 <article class="primeiro">
     <p>PROJECT "CHESS" <br><br> 2 player chess board game done at the end of course of my first year. <br>
-        It features customizable size and board appearance. Coded in Kotlin programming language.<br><br><a href="chess" class="chessbutton">Find more about this project</a></p>
+        It features customizable size and board appearance. Coded in Kotlin programming language.<br><br><a href="chess"
+                                                                                                            class="chessbutton">Find
+            more about this project</a></p>
     <img src="{% static 'portfolio/images/chess.png' %}" alt="chess">
+
 </article>
+
+<article class="segundo">
+    <p><a href="tfc" style="font-size: 40px" class="chessbutton">TFC's</a></p>
+    <p><a href="api" style="font-size: 40px" class="chessbutton">API</a></p>
+
+</article>
+
 
 <footer>
     <div class="contacts">
-        <div class="linkedin"><p><a href="https://www.linkedin.com/in/hugobfernandes/"> <img src="{% static 'portfolio/images/linkedin.png' %}" alt="linkedin"></a></p></div>
+        <div class="linkedin"><p><a href="https://www.linkedin.com/in/hugobfernandes/"> <img
+                src="{% static 'portfolio/images/linkedin.png' %}" alt="linkedin"></a></p></div>
         <p>&emsp;</p>
-        <div class="email"><p><a href="mailto: hugofbarracosa@gmail.com"><img src="{% static 'portfolio/images/email.png' %}" alt="email"></a></p></div>
+        <div class="email"><p><a href="mailto: hugofbarracosa@gmail.com"><img
+                src="{% static 'portfolio/images/email.png' %}" alt="email"></a></p></div>
     </div>
 </footer>
 </body>
